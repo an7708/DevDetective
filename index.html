@@ -1,0 +1,67 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev-Detective | GitHub User Search</title>
+    <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+    <!-- APP WRAPPER -->
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+        <h1 class="logo">Dev-Detective</h1>
+
+        <div class="header-actions">
+            <button id="themeToggle" class="btn small">
+            🌙 Theme
+            </button>
+        </div>
+        </header>
+
+        <!-- MODE TOGGLE -->
+        <div class="mode-toggle">
+        <button id="searchModeBtn" class="tab active">Search Mode</button>
+        <button id="battleModeBtn" class="tab">Battle Mode</button>
+        </div>
+
+        <!-- SEARCH MODE -->
+        <section id="searchMode" class="mode-section active">
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Enter GitHub username (e.g., octocat)" />
+            <button id="searchBtn" class="btn">Search</button>
+        </div>
+
+        <div id="loadingSingle" class="loading hidden">Loading...</div>
+        <div id="errorSingle" class="error hidden"></div>
+
+        <div id="profileSingle" class="profile-area"></div>
+        <div id="reposSingle" class="repos-area"></div>
+        </section>
+
+        <!-- BATTLE MODE -->
+        <section id="battleMode" class="mode-section">
+        <div class="battle-box">
+            <input id="battleInput1" type="text" placeholder="Username 1 (e.g., octocat)" />
+            <input id="battleInput2" type="text" placeholder="Username 2 (e.g., torvalds)" />
+            <button id="battleBtn" class="btn">Battle</button>
+        </div>
+
+        <div id="loadingBattle" class="loading hidden">Loading...</div>
+        <div id="errorBattle" class="error hidden"></div>
+
+        <div id="battleResult" class="battle-result">
+            <div id="card1" class="battle-card"></div>
+            <div class="vs">VS</div>
+            <div id="card2" class="battle-card"></div>
+        </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+    </html>
